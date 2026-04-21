@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: #E9E7EB;
+    font-size: 16px;
+}
+html, body {
+    overflow-x: hidden;
+}
+.container {
+    max-width: 1000px;   /* можно 1000–1150 */
+    margin: 0 auto;
+}
+
+
+@media (max-width: 792px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    left: 168px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 142px;
+    top: 6px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.nav {
+    display: flex;
+    gap: 250px;
+    top: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 27px;
+    position: relative;
+}
+
+/* underline */
+.nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #6c6a8b;
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back {
+    position: absolute;
+    left: 40px;
+    top: 120px;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.back:hover {
+    color: #4f4c73;
+}
+
+/* =========================
+   PRODUCT LAYOUT (ТВОЯ СЕТКА)
+========================= */
+
+.product-container {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* адаптив через bootstrap + fallback */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* IMAGE */
+.product-image img {
+    width: 400px;
+    border-radius: 25px;
+    max-width: 100%;
+}
+
+/* TEXT */
+.product-info h1 {
+    font-size: 30px;
+}
+
+.material {
+    margin-top: 20px;
+}
+
+.description {
+    margin-top: 20px;
+    max-width: 500px;
+}
+
+/* =========================
+   BUY BLOCK
+========================= */
+
+.buy-block {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.price {
+    font-size: 27px;
+}
+
+button {
+    padding: 15px 115px;
+    background: #3C2C5A;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif !important;
+}
+
+button:hover {
+    background: #6c6a8b;
+}
+
+/* =========================
+   FOOTER (твоя сетка)
+========================= */
+
+.footer {
+    margin-top: 80px;
+    background: #cfcfcf;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* адаптив footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+.footer-left {
+    font-size: 16px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.order-btn {
+    padding: 10px 70px;
+    margin-bottom: 10px;
+    background: #3C2C5A;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.order-btn:hover {
+    background: #6c6a8b;
+}
+
+.socials img {
+    width: 85px;
+    height: 61px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.socials img:hover {
+    transform: scale(1.1);
+}
+.tg {
+    margin-right: 15px;
+}

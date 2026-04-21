@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Lune</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+<header class="header">
+    <div class="logo">
+        <img src="images/logo.jpg" alt="лого">
+    </div>
+
+    <nav class="nav">
+        <a href="index.html" class="active">главная</a>
+        <a href="catalog.html">каталог</a>
+        <a href="#">заявка</a>
+        <a href="#">контакты</a>
+        <a href="#">о доставке</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="images/glav1.jpg" class="hero-img" alt="фон">
+
+    <div class="hero-content">
+        <h1>Lune –</h1>
+        <p>украшения, наполненные смыслом</p>
+        <a href="catalog.html" class="hero-btn">Каталог</a>
+    </div>
+</section>
+
+<section class="about container">
+    <h2>О нас</h2>
+
+    <div class="about-block">
+        <div class="text">
+            <p>
+                Lune — это небольшая мастерская 
+                украшений, в которой каждая деталь 
+                создаётся вручную с особым 
+                вниманием к форме, материалам и смыслу.
+                В основе бренда лежит идея: 
+                украшение — это не просто аксессуар, а 
+                продолжение внутреннего состояния 
+                человека. .
+            </p>
+        </div>
+        <img src="images/glav2.jpg" alt="украшение2">
+    </div>
+
+    <div class="about-block">
+        <img src="images/glav3.jpg" alt="украшение3">
+
+        <div class="text">
+            <p>
+                Мастерицы Lune — это девушки, увлечённые своим делом, 
+                которые работают с натуральными камнями, металлом и 
+                текстурами, сочетая эстетику и символизм.
+                Каждое изделие проходит через несколько этапов: от 
+                подбора камня до финальной сборки, и на каждом этапе в 
+                него вкладывается не только труд, но и чувство.
+                Работа с украшениями для них — это почти 
+                медитативный процесс.
+                Они подбирают камни не только по внешнему виду, но и 
+                по их энергетике, оттенкам, сочетанию с металлом.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="works">
+    <div class="container">
+        <h2>Работы наших мастериц</h2>
+
+        <div class="slider">
+            <button class="prev">❮</button>
+
+            <div class="slider-track">
+                <div class="slide active"><img src="images/glav4.jpg" alt="урашиение4"></div>
+                <div class="slide"><img src="images/glav5.jpg" alt="украшение5"></div>
+                <div class="slide"><img src="images/3.jpg" alt="украшение5"></div>
+            </div>
+
+            <button class="next">❯</button>
+        </div>
+    </div>
+</section>
+
+<section class="reviews container">
+    <h2>Отзывы</h2>
+
+    <div class="reviews-grid">
+        <div class="review">Мария, 25 лет
+            Я давно искала украшение, которое будет «моим», 
+            и нашла его в Lune.
+            Была удивлена, что к украшениям положили инструкцию, 
+            ухода за украшениям, а так же набор для самого ухода.
+            Оно очень простое, но в нём есть какая-то глубина. 
+            Ношу почти каждый день💜</div>
+        <div class="review">Дарья, 27 лет:
+            Украшение пришло красиво упакованным, как маленький 
+            подарок.
+            Очень приятное ощущение, когда открываешь посылку.</div>
+        <div class="review">Анастасия, 28 лет:
+            Заказывала браслет и была приятно удивлена качеством.
+            Видно, что это не массовое производство — всё сделано 
+            аккуратно и с душой.</div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-content">
+
+        <div class="footer-left">
+            <p>+7991 000 00 00</p>
+            <p>Lune@mail.ru</p>
+            <p>г.Санкт-Петербург, ул.Двинская, д.16</p>
+            <p>© Lune by Крамаренко София </p> <!-- новая строка -->
+        </div>
+
+        <div class="footer-right">
+            <button class="order-btn">Заказать</button>
+
+            <div class="socials">
+                <img src="images/cnopka1.png" class="tg" alt="тг">
+
+                <img src="images/cnopka2.png" alt="vk">
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index){
+    slides.forEach(s => s.classList.remove('active'));
+    slides[index].classList.add('active');
+}
+
+document.querySelector('.next').onclick = () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+};
+
+document.querySelector('.prev').onclick = () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+};
+</script>
+
+</body>
+</html>

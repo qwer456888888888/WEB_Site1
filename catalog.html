@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="styles/catalog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+
+
+<header class="header">
+    <div class="logo">
+        <img src="images/logo.jpg" alt="лого">
+    </div>
+
+    <nav class="nav">
+        <a href="index.html">главная</a>
+        <a href="catalog.html" class="active">каталог</a>
+        <a href="#">заявка</a>
+        <a href="#">контакты</a>
+        <a href="#">о доставке</a>
+    </nav>
+</header>
+
+<!-- стрелка -->
+<a href="index.html" class="back">❮</a>
+
+<!-- каталог -->
+<main class="catalog">
+
+    <div class="grid">
+
+        <!-- Карточка -->
+        <div class="card">
+            <img src="images/product.jpg" alt="">
+            <h3><a href="product.html">Танец ночи</a></h3>
+            <p>Серебро, аметист</p>
+            <span class="price">8 000 р.</span>
+            <button>Заказать</button>
+        </div>
+
+        <div class="card">
+            <img src="images/2.jpg" alt="">
+            <h3 class="product-title">Лунный свет</h3>
+            <p>Серебро, жемчуг</p>
+            <span class="price">15 000 р.</span>
+            <button>Заказать</button>
+        </div>
+
+        <div class="card">
+            <img src="images/3.jpg" alt="">
+            <h3 class="product-title">Инь-Ян</h3>
+            <p>Серебро, опал</p>
+            <span class="price">7 000 р.</span>
+            <button>Заказать</button>
+        </div>
+
+        <div class="card">
+            <img src="images/4.jpg" alt="">
+            <h3 class="product-title">Лже-любовь</h3>
+            <p>Серебро</p>
+            <span class="price">6 000 р.</span>
+            <button>Заказать</button>
+        </div>
+
+        <div class="card">
+            <img src="images/5.jpg" alt="">
+            <h3 class="product-title">Слезы граната</h3>
+            <p>Серебро, гранат</p>
+            <span class="price">13 000 р.</span>
+            <button>Заказать</button>
+        </div>
+
+        <div class="card">
+            <img src="images/6.jpg" alt="">
+            <h3 class="product-title">Осколки прошлого</h3>
+            <p>Серебро, хрусталь</p>
+            <span class="price">7 000 р.</span>
+            <button>Заказать</button>
+        </div>
+
+    </div>
+
+    <div class="more">
+        <button>Ещё</button>
+    </div>
+
+</main>
+
+<!-- корзина -->
+<div class="cart-btn" id="cartIconBtn">
+    <img class="cart-icon-img" src="images/cart.svg" alt="Корзина">
+    <span class="cart-badge" id="cartCountBadge">0</span>
+</div>
+<script>
+let count = 0;
+
+const cart = document.getElementById("cartIconBtn");
+const badge = document.getElementById("cartCountBadge");
+const buttons = document.querySelectorAll("button");
+
+/* сообщение */
+const message = document.createElement("div");
+message.className = "cart-message";
+message.innerText = "Корзина пустая, закажите украшения";
+document.body.appendChild(message);
+
+/* кнопки заказать */
+buttons.forEach(btn => {
+    if(btn.innerText === "Заказать") {
+        btn.addEventListener("click", () => {
+            count++;
+            badge.innerText = count;
+        });
+    }
+});
+
+/* клик по корзине */
+cart.addEventListener("click", () => {
+    if(count === 0) {
+        message.style.display = "block";
+
+        setTimeout(() => {
+            message.style.display = "none";
+        }, 2000);
+    }
+});
+
+</script>
+<footer class="footer">
+    <div class="container footer-content">
+
+        <div class="footer-left">
+            <p>+7991 000 00 00</p>
+            <p>Lune@mail.ru</p>
+            <p>г.Санкт-Петербург, ул.Двинская, д.16</p>
+            <p>© Lune by Крамаренко София </p> 
+        </div>
+
+        <div class="footer-right">
+            <button class="order-btn">Заказать</button>
+
+            <div class="socials">
+                <img src="images/cnopka1.png" class="tg" alt="">
+
+                <img src="images/cnopka2.png" alt="vk">
+            </div>
+        </div>
+
+    </div>
+</footer>
