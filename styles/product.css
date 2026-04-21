@@ -8,7 +8,7 @@ html, body {
     overflow-x: hidden;
 }
 .container {
-    max-width: 1000px;   /* можно 1000–1150 */
+    max-width: 1000px;   
     margin: 0 auto;
 }
 
@@ -74,10 +74,6 @@ html, body {
     width: 100%;
 }
 
-/* =========================
-   BACK BUTTON
-========================= */
-
 .back {
     position: absolute;
     left: 40px;
@@ -91,9 +87,6 @@ html, body {
     color: #4f4c73;
 }
 
-/* =========================
-   PRODUCT LAYOUT (ТВОЯ СЕТКА)
-========================= */
 
 .product-container {
     display: flex;
@@ -102,7 +95,6 @@ html, body {
     margin-top: 40px;
 }
 
-/* адаптив через bootstrap + fallback */
 @media (max-width: 768px) {
     .product-container {
         flex-direction: column;
@@ -110,7 +102,6 @@ html, body {
     }
 }
 
-/* IMAGE */
 .product-image img {
     width: 400px;
     border-radius: 25px;
@@ -131,9 +122,6 @@ html, body {
     max-width: 500px;
 }
 
-/* =========================
-   BUY BLOCK
-========================= */
 
 .buy-block {
     margin-top: 30px;
@@ -160,9 +148,6 @@ button:hover {
     background: #6c6a8b;
 }
 
-/* =========================
-   FOOTER (твоя сетка)
-========================= */
 
 .footer {
     margin-top: 80px;
@@ -176,7 +161,6 @@ button:hover {
     align-items: center;
 }
 
-/* адаптив footer */
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
