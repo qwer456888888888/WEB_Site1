@@ -10,7 +10,6 @@ body {
     margin: 0 auto;
 }
 
-/* HEADER */
 .header {
     display: flex;
     justify-content: center;
@@ -29,7 +28,6 @@ body {
     height: 70px;
 }
 
-/* МЕНЮ */
 .nav {
     display: flex;
     gap: 24px;
@@ -65,7 +63,6 @@ body {
     width: 100%;
 }
 
-/* HERO */
 .hero {
     position: relative;
     height: 650px;
@@ -112,7 +109,6 @@ body {
     font-size: 16px;
 }
 
-/* ABOUT */
 .about {
     padding: 60px 0;
 }
@@ -143,7 +139,6 @@ body {
     max-width: 400px;
 }
 
-/* WORKS */
 .works {
     background: #5b5374;
     color: white;
@@ -191,7 +186,6 @@ body {
     border-radius: 8px;
 }
 
-/* REVIEWS */
 .reviews {
     padding: 60px;
 }
@@ -213,25 +207,22 @@ body {
 /* FOOTER */
 .footer {
     margin-top: 80px;
-    padding: 40px 0; /* увеличили высоту */
+    padding: 40px 0;
     background: #cfcfcf;
 }
 
-/* ВНУТРЕННИЙ КОНТЕЙНЕР */
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* ЛЕВАЯ ЧАСТЬ */
 .footer-left {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-/* ПРАВАЯ */
 .footer-right {
     display: flex;
     flex-direction: column;
@@ -239,13 +230,11 @@ body {
     gap: 15px;
 }
 
-/* КНОПКА */
 .order-btn {
     width: 180px;
     padding: 10px;
 }
 
-/* СОЦСЕТИ */
 .socials {
     display: flex;
     gap: 10px;
@@ -253,7 +242,6 @@ body {
 .tg {
     margin-right: 0px; 
 }
-/* ИКОНКИ */
 .socials img {
     width: 85px;
     height: 61px;
@@ -271,22 +259,22 @@ button {
     font-family: 'Playfair Display', serif !important;
 }
 .order-btn {
-    background: #3C2C5A; /* фиолетовый */
+    background: #3C2C5A; 
     color: white;
 
     padding: 10px 70px;
     font-size: 16px;
 
     border: none;
-    border-radius: 12px; /* скругление */
+    border-radius: 12px; 
 
     cursor: pointer;
     transition: 0.3s;
 
-    width: auto; /* важно */
+    width: auto; 
 }
 
-/* ховер */
+
 .order-btn:hover {
     background: #3C2C5A;
 }
